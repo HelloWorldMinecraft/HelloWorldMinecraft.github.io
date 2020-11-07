@@ -35,7 +35,7 @@ jobs:
       - name: Push
         uses: ad-m/github-push-action@master
         with:
-          directory: dist
+          directory: ./dist
           branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
           force: true
