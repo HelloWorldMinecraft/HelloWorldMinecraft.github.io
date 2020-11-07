@@ -1,64 +1,19 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>EasyConverter</title>
         <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script>
-            var data_values
-            $.getJSON("https://cors.io/?https://allthecode.github.io/values.json", function(json) {
-                data_values = json
-            })
-
-            function convert(old1, old2, newValue) {
-                text = $("#data")[0].value.split(",")
-                new_values = []
-                namespaced = $("#namespace")[0].checked
-                spaces = $("#spaces")[0].checked
-                for(i in text) {
-                    value = text[i].toLowerCase().trim()
-                    done = false
-                    for(j in data_values) {
-                        data_value = data_values[j]
-                        if("minecraft:" + value === data_value[old1] || value === data_value[old2]
-                                 || "minecraft:" + value === data_value[old2] || value === data_value[old2]) {
-
-                            if(namespaced) new_values.push(data_value[newValue])
-                            else new_values.push(data_value[newValue].replace("minecraft:", ""))
-                            done = true
-                            break
-                        }
-                    }
-                    if(!done) {
-                       if(namespaced) new_values.push(value)
-                      else new_values.push(value.replace("minecraft:", ""))
-                    }
-
-                }
-                $("#data")[0].value = new_values.join("," + (spaces ? " " : ""))
-            }
-		
-		function dump_itemnames() {
-			replaces = {}
-			for (var i in data_values) {
-				value = data_values[i]
-				replaces[value["numericalID"]] = value["1.13"].replace("minecraft:", "")
-				if (value["1.12"] != value["1.13"])
-				replaces[value["1.12"].replace("minecraft:", "")] = value["1.13"].replace("minecraft:", "")
-			}
-			str = ""
-			for (key in replaces) {
-				str += '"' + key + '": ' + replaces[key] + "\n"
-			}
-			console.log(str)
-		}
-        </script>
+        <script src="converter.js"></script>
+        <script src="downloads.js"></script>
     </head>
     <body>
         <div class="header">
-            <a>LotsOfIDsConverter</a>
+            <a>Hello World Minecraft</a>
         </div>
         <div class="posts">
             <div class="post">
+                <h2>ID Converter</h2>
                 <b>IDs:</b>
                 <input id="data" style="font-size: 10" type="text" name="title" size="50">
                 <button onclick="convert('1.13', 'numericalID', '1.12')">Change to 1.12</button>
@@ -69,6 +24,10 @@
                 <input type="checkbox" id="spaces" checked>Spaced commas
 				<br />
 				<button onclick="dump_itemnames()">Dump Itemnames to Console</button>
+            </div>
+
+            <div class="post downloads">
+                <h2>Plugin Downloads</h2>
             </div>
         </div>
     </body>
