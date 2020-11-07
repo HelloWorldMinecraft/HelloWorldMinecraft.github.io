@@ -1,17 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <canvas id="background"></canvas>
+    <MainPage/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MainPage from './components/MainPage.vue'
+const trianglify = require('trianglify')
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MainPage
+  },
+  mounted: function() {
+    document.body.style.background = "url(" + trianglify({
+      width: screen.width,
+      height: screen.height
+    }).toCanvas().toDataURL() + ")"
   }
 }
 </script>
@@ -23,6 +30,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
