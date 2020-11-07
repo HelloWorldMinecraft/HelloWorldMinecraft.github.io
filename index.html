@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>EasyConverter</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script>
+            $.getJSON("https://allthecode.github.io/data.json", function(json) {
+                data_values = json
+            })
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <a>LotsOfIDsConverter</a>
+        </div>
+        <div class="posts">
+            <div class="post">
+                <b>IDs:</b>
+                <input style="font-size: 10" type="text" name="title" size="50">
+                <button onlick="to_1.12()">Change to 1.12</button>
+                <button onclick="to_1.13()">Change to 1.13</button>
+                <button onclick="to_numerical()">Change to numerical IDs</button>
+            </div>
+        </div>
+    </body>
+</html>
