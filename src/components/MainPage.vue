@@ -1,7 +1,7 @@
 <template>
   <div style="margin-left: 10%; margin-right: 10%">
-    <b-card bg-variant="transparent" text-variant="light" border-variant="dark" title="Red's Server">
-      <b-carousel controls indicators>
+    <b-card bg-variant="transparent" text-variant="light" border-variant="dark">
+      <b-carousel controls indicators fade interval="3000">
         <b-carousel-slide img-src="/screenshots/agskies2-1.png" caption="Agrarian Skies 2" text="Islands by Red3842 (Left) and Pika_trooper (Right)">
           <b-button variant="success" href="#agskies2">Join Now!</b-button>
         </b-carousel-slide>
@@ -38,6 +38,15 @@
           <b-button variant="success" href="#skyodyssey">Join Now!</b-button>
         </b-carousel-slide>
 
+
+
+        <b-carousel-slide img-src="/screenshots/creative-1.png" caption="Creative" text="Build by Hughster3, Youthier, _WindRunner_, smarshmallow, Dakingyuknow34, seeper20, and Xfer_Terminus">
+          <b-button variant="success" href="#creative">Join Now!</b-button>
+        </b-carousel-slide>
+
+        <b-carousel-slide img-src="/screenshots/survival2-1.png" caption="Survival 2" text="Build by _WindRunner_ and Dakingyuknow34">
+          <b-button variant="success" href="#survival2">Join Now!</b-button>
+        </b-carousel-slide>
       </b-carousel>
     </b-card>
   </div>
