@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <canvas id="background"></canvas>
+    <div id="background">
+      <canvas ref="background" id="bacgkround"></canvas>
+    </div>
     <MainPage/>
   </div>
 </template>
@@ -15,10 +17,10 @@ export default {
     MainPage
   },
   mounted: function() {
-    document.body.style.background = "url(" + trianglify({
+    trianglify({
       width: screen.width,
       height: screen.height
-    }).toCanvas().toDataURL() + ")"
+    }).toCanvas(this.$refs.background);
   }
 }
 </script>
@@ -30,5 +32,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+#background {
+  position: fixed;
 }
 </style>
