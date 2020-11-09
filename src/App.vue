@@ -3,7 +3,7 @@
     <div id="background">
       <canvas ref="background" id="bacgkround"></canvas>
     </div>
-    <MainPage/>
+    <MainPage :servers="this.$root.servers" :images="this.$root.images"/>
   </div>
 </template>
 
@@ -17,10 +17,24 @@ export default {
     MainPage
   },
   mounted: function() {
-    trianglify({
-      width: screen.width,
-      height: screen.height
-    }).toCanvas(this.$refs.background);
+    this.generateBackground();
+  },
+
+  created: function() {
+    window.addEventListener("resize", this.generateBackground);
+  },
+  destroyed: function() {
+    window.removeEventListener("resize", this.generateBackground);
+  },
+
+  methods: {
+    generateBackground() {
+      trianglify({
+        width: screen.width,
+        height: screen.height,
+        seed: 12345
+      }).toCanvas(this.$refs.background);
+    }
   }
 }
 </script>

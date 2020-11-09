@@ -1,0 +1,86 @@
+{
+  "survival": {
+    "name": "Survival",
+    "version": "latest",
+    "modpack": "vanilla",
+    "restricted": "irl",
+    "map": true
+  },
+  "survival2": {
+    "name": "Survival 2",
+    "version": "latest",
+    "modpack": "vanilla",
+    "restricted": "irl",
+    "map": true
+  },
+  "survival3": {
+    "name": "Survival 3",
+    "version": "latest",
+    "modpack": "vanilla",
+    "restricted": "special",
+    "map": true
+  },
+  "survival4": {
+    "name": "Survival 4",
+    "version": "latest",
+    "modpack": "vanilla",
+    "restricted": "anyone",
+    "map": true
+  },
+  "creative": {
+    "name": "Creative",
+    "version": "latest",
+    "modpack": "vanilla",
+    "restricted": "irl",
+    "map": true
+  },
+  "prankpack2": {
+    "name": "Prank Pack 2",
+    "version": "1.12.2",
+    "modpack": "custom",
+    "restricted": "anyone",
+    "map": false
+  },
+  "stoneblock": {
+    "name": "Stoneblock",
+    "version": "1.12.2",
+    "modpack": "https://www.curseforge.com/minecraft/modpacks/stoneblock",
+    "restricted": "anyone",
+    "map": false
+  },
+  "skyodyssey": {
+    "name": "Sky Odyssey",
+    "version": "1.12.2",
+    "modpack": "https://www.curseforge.com/minecraft/modpacks/ftb-sky-odyssey",
+    "restricted": "special",
+    "map": false
+  },
+  "pixelmon": {
+    "name": "Pixelmon",
+    "version": "1.12.2",
+    "modpack": "custom",
+    "restricted": "special",
+    "map": false
+  },
+  "agskies2": {
+    "name": "Agrarian Skies 2",
+    "version": "1.7.10",
+    "modpack": "https://www.curseforge.com/minecraft/modpacks/agrarian-skies-2",
+    "restricted": "special",
+    "map": false
+  },
+  "crundee": {
+    "name": "CrundeeCraft",
+    "version": "1.17.10",
+    "modpack": "https://www.curseforge.com/minecraft/modpacks/crundee-craft",
+    "restricted": "irl",
+    "map": false
+  },
+  "infinitysb": {
+    "name": "FTB Infinity Evolved Skyblock",
+    "version": "1.7.10",
+    "modpack": "https://www.curseforge.com/minecraft/modpacks/ftb-infinity-evolved-skyblock",
+    "restricted": "anyone",
+    "map": false
+  }
+}

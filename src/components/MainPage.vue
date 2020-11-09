@@ -1,7 +1,7 @@
 <template>
   <div style="margin-left: 10%; margin-right: 10%">
     <b-card bg-variant="transparent" text-variant="light" border-variant="dark">
-      <Servers/>
+      <Servers :images="images" :servers="servers"/>
     </b-card>
 
     <br/>
@@ -17,6 +17,16 @@ import Servers from "./Servers.vue"
 import Features from "./Features.vue"
 
 export default {
+  props: {
+    servers: {
+      type: Object,
+      required: true
+    },
+    images: {
+      type: Object,
+      required: true
+    }
+  },
   components: { Servers, Features },
   name: 'MainPage'
 }
