@@ -37,49 +37,49 @@
   "prankpack2": {
     "name": "Prank Pack 2",
     "version": "1.12.2",
-    "modpack": "custom",
+    "modpack": "/packs/prankpack2.zip",
     "restricted": "anyone",
     "map": false
   },
   "stoneblock": {
     "name": "Stoneblock",
     "version": "1.12.2",
-    "modpack": "https://www.curseforge.com/minecraft/modpacks/stoneblock",
+    "modpack": "twitch",
     "restricted": "anyone",
     "map": false
   },
   "skyodyssey": {
     "name": "Sky Odyssey",
     "version": "1.12.2",
-    "modpack": "https://www.curseforge.com/minecraft/modpacks/ftb-sky-odyssey",
+    "modpack": "twitch",
     "restricted": "special",
     "map": false
   },
   "pixelmon": {
     "name": "Pixelmon",
     "version": "1.12.2",
-    "modpack": "custom",
+    "modpack": "/packs/pixelmon.zip",
     "restricted": "special",
     "map": false
   },
   "agskies2": {
     "name": "Agrarian Skies 2",
     "version": "1.7.10",
-    "modpack": "https://www.curseforge.com/minecraft/modpacks/agrarian-skies-2",
+    "modpack": "twitch",
     "restricted": "special",
     "map": false
   },
   "crundee": {
     "name": "CrundeeCraft",
     "version": "1.17.10",
-    "modpack": "https://www.curseforge.com/minecraft/modpacks/crundee-craft",
+    "modpack": "twitch",
     "restricted": "irl",
     "map": false
   },
   "infinitysb": {
     "name": "FTB Infinity Evolved Skyblock",
     "version": "1.7.10",
-    "modpack": "https://www.curseforge.com/minecraft/modpacks/ftb-infinity-evolved-skyblock",
+    "modpack": "twitch",
     "restricted": "anyone",
     "map": false
   }
