@@ -43,30 +43,24 @@
             <span>. Connecting via the 'standard' IP will crash your game.</span>
           </template>
           <template v-else>
-            <b>nathann5684.tk</b>
-            <span> and use the Compass to select a server.</span>
-          </template>
-        </b-list-group-item>
-        <b-list-group-item>
-          <b-badge variant="primary" pill>4</b-badge>
-          <template v-if="servers[server].version == '1.7.10'">
-            <span> If you cannot join, </span>
-            <span>connect via the IP </span>
-            <b>nathann5684.tk</b>
+            <b>{{server}}.nathann5684.tk</b>
+            <span>. If this fails, join via </span>
+            <b>lobby.nathann5684.tk</b>
             <span>. Run the command </span>
             <b>/sub start {{server}}</b>
-            <span>. Leave the game, wait five minutes for the server to start, and then reconnect via the regular IP.</span>
+            <span>. Leave the server, wait two minutes for the server to start, and then reconnect via the regular IP.</span>
           </template>
-          <template v-else>
-            <span> If you cannot join via the compass, run the command </span>
+        </b-list-group-item>
+        <b-list-group-item v-if="servers[server].version == '1.7.10'">
+          <b-badge variant="primary" pill>4</b-badge>
+          <template>
+            <span> If you cannot join, </span>
+            <span>connect via the IP </span>
+            <b>lobby.nathann5684.tk</b>
+            <span>. Run the command </span>
             <b>/sub start {{server}}</b>
-            <span>. Wait about two minutes, and then run either </span>
-            <b>/server {{server}}</b>
-            <span> or </span>
-            <b>/sub teleport {{server}}</b>
-            <span>.</span>
+            <span>. Leave the server, wait five minutes for the server to start, and then reconnect via the regular IP.</span>
           </template>
-          <span> If neither of these work, let me know in Discord.</span>
         </b-list-group-item>
       </b-list-group>
     </b-modal>
