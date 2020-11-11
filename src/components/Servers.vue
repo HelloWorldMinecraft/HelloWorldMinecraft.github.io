@@ -3,6 +3,7 @@
     <b-carousel id="servers" controls indicators fade :interval="3000">
       <b-carousel-slide v-for="image in Object.keys(images)" :key="image" :img-src="'/screenshots/' + image" :caption="servers[image.split('-')[0]].name" :text="images[image]">
         <b-button variant="success" @click="$bvModal.show(image.split('-')[0])">Join Now!</b-button>
+        <b-button variant="success" :href="'https://' + image.split('-')[0] + '-map.nathann5684.tk:2096/'" v-if="servers[image.split('-')[0]].map">View Map</b-button>
       </b-carousel-slide>
     </b-carousel>
 
