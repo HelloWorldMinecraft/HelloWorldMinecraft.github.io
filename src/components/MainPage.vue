@@ -3,18 +3,11 @@
     <b-card bg-variant="transparent" text-variant="light" border-variant="dark">
       <Servers :images="images" :servers="servers"/>
     </b-card>
-
-    <br/>
-
-    <b-card id="" bg-variant="transparent" align="left" text-variant="light" border-variant="dark">
-      <Features/>
-    </b-card>
   </div>
 </template>
 
 <script>
 import Servers from "./Servers.vue"
-import Features from "./Features.vue"
 
 export default {
   props: {
@@ -27,7 +20,7 @@ export default {
       required: true
     }
   },
-  components: { Servers, Features },
+  components: { Servers },
   name: 'MainPage'
 }
 </script>
